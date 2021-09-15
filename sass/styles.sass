@@ -90,68 +90,6 @@ header
   flex-direction: column
 
 
-// FORM
-
-.form-container
-  display: flex
-  flex-direction: column
-  gap: 20px
-  padding: 50px
-  border: 1px solid $blue-dark
-  border-radius: 20px
-  .form-title
-    display: flex
-    flex-direction: column
-    gap: 10px
-    span
-      font-size: 12px
-      text-transform: uppercase
-      color: $form-notification
-      display: flex
-      gap: 7px
-    h2.form-title-header
-      font-size: 20px
-      line-height: 26px
-    span:before
-      content: ' '
-      width: 4px
-      height: 14px
-      background-color: #FF7A00
-      border-radius: 2px
-  form
-    display: flex
-    flex-direction: column
-    gap: 20px
-    .form-group
-      position: relative
-      input:not([type="submit"])
-        width: 100%
-        border: 1px solid $input-border-default
-        outline: none
-        height: 50px
-        padding: 0 20px 0
-        border-radius: 5px
-        font-size: 16px
-        &:focus
-          border: 1px solid $blue-dark
-      input.error
-        background-color: $bg-input-error
-        border: 1px solid $bg-input-error
-        &:focus
-          border: 1px solid $bg-input-error
-      label
-        position: absolute
-        color: $blue-dark
-        top: 4px
-        right: 15px
-        z-index: 2
-        height: 100%
-        display: flex
-        align-items: center
-        line-height: 16px
-
-
-
 // ARTICLE
 
 section.info-list
@@ -187,16 +125,101 @@ article:not(:first-of-type)
   gap: 32px
 
 .box
-  width: 300px
   display: flex
   align-items: start
   justify-content: center
-  gap: 10px
-  padding: 20px 20px
+  width: 300px
   border: 1px solid $grey-light
+  background-color: $pure-white
   border-radius: 10px
-  font-size: 16px
+  position: relative
+  .box-container
+    height: 100%
+    width: 100%
+    display: flex
+    align-items: start
+    justify-content: center
+    gap: 10px
+    padding: 20px 20px
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: bold
+    span
+      font-weight: normal
+  &:after
+    content: ''
+    position: absolute
+    border-radius: 10px
+    width: calc(100%)
+    height: calc(100%)
+    background-color: $grey-light
+    z-index: -1
+    top: 4px
+    left: 4px
 
+// FORM
+
+.form-container
+  display: flex
+  flex-direction: column
+  gap: 20px
+  padding: 50px
+  border: 1px solid $blue-dark
+  border-radius: 20px
+  min-width: 400px
+  &:after
+    border-radius: 20px
+  .form-title
+    display: flex
+    flex-direction: column
+    gap: 10px
+    span
+      font-size: 12px
+      text-transform: uppercase
+      color: $form-notification
+      display: flex
+      gap: 7px
+    h2.form-title-header
+      font-size: 20px
+      line-height: 26px
+    span:before
+      content: ' '
+      width: 4px
+      height: 14px
+      background-color: #FF7A00
+      border-radius: 2px
+  form
+    display: flex
+    width: 100%
+    flex-direction: column
+    gap: 20px
+    .form-group
+      position: relative
+      input:not([type="submit"])
+        width: 100%
+        border: 1px solid $input-border-default
+        outline: none
+        height: 50px
+        padding: 0 40px 0 20px
+        border-radius: 5px
+        font-size: 16px
+        &:focus
+          border: 1px solid $blue-dark
+      input.error
+        background-color: $bg-input-error
+        border: 1px solid $bg-input-error
+        &:focus
+          border: 1px solid $bg-input-error
+      label
+        position: absolute
+        color: $blue-dark
+        top: 4px
+        right: 15px
+        z-index: 2
+        height: 100%
+        display: flex
+        align-items: center
+        line-height: 16px
 
 
 // BUTTON
@@ -233,8 +256,130 @@ article:not(:first-of-type)
   display: flex
   justify-content: center
   color: $pure-white
-  background-color: $green-dark
+  background-color: $green-medium
   letter-spacing: .6px
   &:hover
-    background-color: $bg-submit-hover
+    background-color: $green-dark
 
+
+// GREEN
+.box-green-dark
+  border: 1px solid $green-dark
+  &:after
+    background-color: $green-dark
+  span
+    color: $green-dark
+
+.box-green-medium
+  border: 1px solid $green-medium
+  &:after
+    background-color: $green-medium
+  span
+    color: $green-medium
+
+.box-green-light
+  border: 1px solid $green-light
+  &:after
+    background-color: $green-light
+  span
+    color: $green-light
+
+
+// RED
+.box-red-dark
+  border: 1px solid $red-dark
+  &:after
+    background-color: $red-dark
+  span
+    color: $red-dark
+
+.box-red-medium
+  border: 1px solid $red-medium
+  &:after
+    background-color: $red-medium
+  span
+    color: $red-medium
+
+.box-red-light
+  border: 1px solid $red-light
+  &:after
+    background-color: $red-light
+  span
+    color: $red-light
+
+// BLUE
+.box-blue-dark
+  border: 1px solid $blue-dark
+  &:after
+    background-color: $blue-dark
+  span
+    color: $blue-dark
+
+.box-blue-medium
+  border: 1px solid $blue-medium
+  &:after
+    background-color: $blue-medium
+  span
+    color: $blue-medium
+
+.box-blue-light
+  border: 1px solid $blue-light
+  &:after
+    background-color: $blue-light
+  span
+    color: $blue-light
+
+
+// PURPLE
+.box-purple-dark
+  border: 1px solid $purple-dark
+  &:after
+    background-color: $purple-dark
+  span
+    color: $purple-dark
+
+.box-purple-medium
+  border: 1px solid $purple-medium
+  &:after
+    background-color: $purple-medium
+  span
+    color: $purple-medium
+
+.box-purple-light
+  border: 1px solid $purple-light
+  &:after
+    background-color: $purple-light
+  span
+    color: $purple-light
+
+
+// GREY
+.box-grey-dark
+  border: 1px solid $grey-dark
+  &:after
+    background-color: $grey-dark
+  span
+    color: $grey-dark
+
+.box-grey-medium
+  border: 1px solid $grey-medium
+  &:after
+    background-color: $grey-medium
+  span
+    color: $grey-medium
+
+.box-grey-light
+  border: 1px solid $grey-light
+  &:after
+    background-color: $grey-light
+  span
+    color: $grey-light
+
+
+// YELLOW
+.box-yellow-medium
+  border: 1px solid $yellow-medium
+  &:after
+    background-color: $yellow-medium
+  span
+    color: $yellow-medium
