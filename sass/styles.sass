@@ -221,6 +221,10 @@ article:not(:first-of-type)
     width: 100%
     flex-direction: column
     gap: 20px
+    input[type="submit"]
+      appearance: none
+      -webkit-appearance: none
+      -moz-appearance: none
     .form-group
       position: relative
       input:not([type="submit"])
@@ -238,10 +242,6 @@ article:not(:first-of-type)
         border: 1px solid $bg-input-error
         &:focus
           border: 1px solid $bg-input-error
-      input[type=submit]
-        appearance: none
-        -webkit-appearance: none
-        -moz-appearance: none
       label
         position: absolute
         color: $blue-dark

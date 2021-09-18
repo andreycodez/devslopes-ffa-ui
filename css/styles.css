@@ -206,6 +206,10 @@ article:not(:first-of-type) {
     width: 100%;
     flex-direction: column;
     gap: 20px; }
+    .form-container form input[type="submit"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
     .form-container form .form-group {
       position: relative; }
       .form-container form .form-group input:not([type="submit"]) {
@@ -223,10 +227,6 @@ article:not(:first-of-type) {
         border: 1px solid #FFD6D6; }
         .form-container form .form-group input.error:focus {
           border: 1px solid #FFD6D6; }
-      .form-container form .form-group input[type=submit] {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none; }
       .form-container form .form-group label {
         position: absolute;
         color: #2563EB;
