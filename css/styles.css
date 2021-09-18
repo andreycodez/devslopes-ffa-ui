@@ -223,6 +223,8 @@ article:not(:first-of-type) {
         border: 1px solid #FFD6D6; }
         .form-container form .form-group input.error:focus {
           border: 1px solid #FFD6D6; }
+      .form-container form .form-group input[type=submit] {
+        appearance: none; }
       .form-container form .form-group label {
         position: absolute;
         color: #2563EB;
