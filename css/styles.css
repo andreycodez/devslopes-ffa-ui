@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   height: 100%; }
 
-body {
+body, #__next {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,10 +28,19 @@ h2 {
   h2 span {
     margin: 0; }
 
-p {
+p, li {
   color: #6B7280;
   font-size: 20px;
   line-height: 32px; }
+
+p, ul {
+  margin-top: 20px; }
+
+ul {
+  margin-left: 20px; }
+
+.hidden {
+  display: none; }
 
 header {
   width: 100%;
@@ -76,6 +85,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px; }
+    .hero-content-left .description p {
+      margin-top: 0; }
 
 .hero-content-right {
   width: 400px;
@@ -87,7 +98,7 @@ section.info-list {
   padding-bottom: 100px; }
 
 article:not(:first-of-type) {
-  margin-top: 180px; }
+  margin-top: 60px; }
 
 .info-item-details {
   display: grid;
@@ -170,6 +181,8 @@ article:not(:first-of-type) {
   .requirements-box .requirements-box-container {
     gap: 20px;
     height: fit-content; }
+    .requirements-box .requirements-box-container p {
+      margin-top: 0; }
 
 .form-container {
   display: flex;
@@ -274,6 +287,9 @@ article:not(:first-of-type) {
   letter-spacing: 0.6px; }
   .submit-button:hover {
     background-color: #109E81; }
+  .submit-button[disabled] {
+    cursor: no-drop;
+    background-color: #A0A0A0; }
 
 .box-green-dark {
   border: 1px solid #109E81; }
@@ -388,7 +404,7 @@ article:not(:first-of-type) {
     color: #FBBF24; }
 
 @media (min-width: 0) and (max-width: 1023px) {
-  body {
+  body, #__next {
     display: flex;
     flex-direction: column;
     gap: 40px; }
