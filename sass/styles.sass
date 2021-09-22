@@ -8,6 +8,10 @@
   padding: 0
   margin: 0
 
+html
+  scroll-behavior: smooth
+
+
 html, body
   width: 100%
   height: 100%
@@ -19,7 +23,6 @@ body, #__next
   font-size: 20px
   font-family: sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue
   color: $grey-dark
-  scroll-behavior: smooth
 
 h1
   font-size: 50px
@@ -345,6 +348,9 @@ article:not(:first-of-type)
   &[disabled]
     cursor: no-drop
     background-color: #A0A0A0
+
+.reset-button
+  background-color: $bg-call-to-action-hover
 
 // GREEN
 .box-green-dark
