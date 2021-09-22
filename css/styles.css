@@ -16,8 +16,7 @@ body, #__next {
   font-size: 20px;
   font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
   color: #111813;
-  scroll-behavior: smooth;
-  margin-bottom: 100px; }
+  scroll-behavior: smooth; }
 
 h1 {
   font-size: 50px;
@@ -128,6 +127,11 @@ article:not(:first-of-type) {
     flex-wrap: wrap;
     gap: 32px;
     grid-column: 1/span 2; }
+  .info-item-details .secret-item-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    order: 2; }
 
 .box {
   display: flex;
@@ -178,10 +182,41 @@ article:not(:first-of-type) {
 
 .requirements-box {
   max-width: 250px; }
-  .requirements-box .requirements-box-container {
+  .requirements-box .requirements-box-container,
+  .requirements-box .secrets-box-container {
     gap: 20px;
     height: fit-content; }
-    .requirements-box .requirements-box-container p {
+    .requirements-box .requirements-box-container p,
+    .requirements-box .secrets-box-container p {
+      margin-top: 0; }
+
+.secrets-box {
+  width: 100%; }
+  .secrets-box .secrets-box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+    .secrets-box .secrets-box-container .box-header {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center; }
+      .secrets-box .secrets-box-container .box-header span.checkbox-big {
+        max-width: 40px;
+        max-height: 40px; }
+      .secrets-box .secrets-box-container .box-header p {
+        font-size: 16px;
+        color: #111813;
+        font-weight: bold;
+        text-transform: none;
+        line-height: 22px;
+        margin-top: 0; }
+    .secrets-box .secrets-box-container .box-description p {
+      font-size: 16px;
+      text-transform: none;
+      color: #6B7280;
+      font-weight: normal;
+      line-height: 24px;
       margin-top: 0; }
 
 .form-container {
@@ -407,7 +442,8 @@ article:not(:first-of-type) {
   body, #__next {
     display: flex;
     flex-direction: column;
-    gap: 40px; }
+    gap: 40px;
+    margin-bottom: 0; }
 
   header {
     padding: 15px 0;
@@ -465,6 +501,17 @@ article:not(:first-of-type) {
 
   h2 {
     font-size: 28px; }
+
+  ul {
+    margin-left: 0;
+    list-style-type: none; }
+
+  ul > li {
+    padding: 20px 0;
+    border-top: 1px solid #E5E5E5; }
+
+  li:last-of-type {
+    padding-bottom: 0; }
 
   .content-wrapper {
     padding: 0; }
